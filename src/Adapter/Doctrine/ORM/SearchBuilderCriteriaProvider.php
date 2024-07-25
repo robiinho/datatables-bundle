@@ -82,7 +82,7 @@ class SearchBuilderCriteriaProvider implements QueryBuilderProcessorInterface {
                 if (isset($rule['criteria'])) {
 
                     $comparisons->add($this->searchBuilder($queryBuilder, $state, $rule));
-                } elseif ($col && $searchTerm && array_key_exists($rule['condition'] ?? null, $this->sbRules) && (null !== $state->getDataTable()->getColumnByName($col))) {
+                } elseif ($col && ($searchTerm != "") && array_key_exists($rule['condition'] ?? null, $this->sbRules) && (null !== $state->getDataTable()->getColumnByName($col))) {
 
 
 
